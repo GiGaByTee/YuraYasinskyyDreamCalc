@@ -7,7 +7,20 @@
 //
 
 #import <Foundation/Foundation.h>
+#import <UIKit/UIKit.h>
+#import <QuartzCore/QuartzCore.h>
 
 @interface UIDesign : NSObject
+
+- (UIImage* ) blurWithCoreImage: (UIImage* ) sourceImage andUIView: (UIView*) viewToChange;
+
+- (UIImage* ) screenshotTaker: (UIView* ) viewToTakeScreenshot;
+
+- (void) parallaxImplementor: (NSMutableArray* ) arrayOfViews;
+
+- (void) calculateXY: (NSMutableArray*) buttonsArray andPreferedRadius: (CGFloat) radius andScreenBounds: (CGRect* ) bounds offset: (NSInteger) offset;
+
+- (void) animationsMaker: (UIView* ) myView duration: (CGFloat) duration speed: (CGFloat) speed;
+
 
 @end

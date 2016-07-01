@@ -7,8 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		5214E04B1D1BF97D0048AD16 /* girl.png in Resources */ = {isa = PBXBuildFile; fileRef = 5214E04A1D1BF97D0048AD16 /* girl.png */; };
-		5214E04F1D1C2B250048AD16 /* 41remaster.png in Resources */ = {isa = PBXBuildFile; fileRef = 5214E04E1D1C2B250048AD16 /* 41remaster.png */; };
 		522D27BF1D118F2A00E97AC4 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 522D27BE1D118F2A00E97AC4 /* main.m */; };
 		522D27C21D118F2A00E97AC4 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 522D27C11D118F2A00E97AC4 /* AppDelegate.m */; };
 		522D27C51D118F2A00E97AC4 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 522D27C41D118F2A00E97AC4 /* ViewController.m */; };
@@ -17,13 +15,17 @@
 		522D27CD1D118F2A00E97AC4 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 522D27CB1D118F2A00E97AC4 /* LaunchScreen.storyboard */; };
 		522D27D81D118F2A00E97AC4 /* dreamCalcTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 522D27D71D118F2A00E97AC4 /* dreamCalcTests.m */; };
 		522D27E31D118F2A00E97AC4 /* dreamCalcUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 522D27E21D118F2A00E97AC4 /* dreamCalcUITests.m */; };
-		5266B63F1D1B1A040067C785 /* button.png in Resources */ = {isa = PBXBuildFile; fileRef = 5266B63E1D1B1A040067C785 /* button.png */; };
-		5266B6521D1B25F50067C785 /* 41.png in Resources */ = {isa = PBXBuildFile; fileRef = 5266B6501D1B25F50067C785 /* 41.png */; };
-		5266B65B1D1B2C8D0067C785 /* 1.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 5266B6541D1B2C8D0067C785 /* 1.jpg */; };
-		5266B6631D1B2D770067C785 /* 2.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 5266B6621D1B2D770067C785 /* 2.jpg */; };
-		5266B6651D1B2DF40067C785 /* 3.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 5266B6641D1B2DF40067C785 /* 3.jpg */; };
-		5266B6691D1B375E0067C785 /* 41x21.png in Resources */ = {isa = PBXBuildFile; fileRef = 5266B6681D1B375E0067C785 /* 41x21.png */; };
-		529B44451D134CD700A8BFA3 /* CalcModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 529B44441D134CD700A8BFA3 /* CalcModel.m */; };
+		527535481D219498006F703B /* SecondViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 527535471D219498006F703B /* SecondViewController.m */; };
+		527535511D227E5B006F703B /* PlotView.m in Sources */ = {isa = PBXBuildFile; fileRef = 527535501D227E5B006F703B /* PlotView.m */; };
+		52D189B21D1C60BB008A8278 /* roundButtonV1.png in Resources */ = {isa = PBXBuildFile; fileRef = 52D189AF1D1C60BB008A8278 /* roundButtonV1.png */; };
+		52D189B31D1C60BB008A8278 /* roundButtonV2.png in Resources */ = {isa = PBXBuildFile; fileRef = 52D189B01D1C60BB008A8278 /* roundButtonV2.png */; };
+		52D189B41D1C60BB008A8278 /* roundButtonV3.png in Resources */ = {isa = PBXBuildFile; fileRef = 52D189B11D1C60BB008A8278 /* roundButtonV3.png */; };
+		52D189B91D1C60D3008A8278 /* galaxy1.png in Resources */ = {isa = PBXBuildFile; fileRef = 52D189B51D1C60D3008A8278 /* galaxy1.png */; };
+		52D189BA1D1C60D3008A8278 /* galaxy2.png in Resources */ = {isa = PBXBuildFile; fileRef = 52D189B61D1C60D3008A8278 /* galaxy2.png */; };
+		52D189BB1D1C60D3008A8278 /* girl.png in Resources */ = {isa = PBXBuildFile; fileRef = 52D189B71D1C60D3008A8278 /* girl.png */; };
+		52D189BC1D1C60D3008A8278 /* nature1.png in Resources */ = {isa = PBXBuildFile; fileRef = 52D189B81D1C60D3008A8278 /* nature1.png */; };
+		52D189BF1D1C615A008A8278 /* CalcModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 52D189BE1D1C615A008A8278 /* CalcModel.m */; };
+		52D189C21D1C631D008A8278 /* UIDesign.m in Sources */ = {isa = PBXBuildFile; fileRef = 52D189C11D1C631D008A8278 /* UIDesign.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -44,8 +46,6 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		5214E04A1D1BF97D0048AD16 /* girl.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = girl.png; sourceTree = SOURCE_ROOT; };
-		5214E04E1D1C2B250048AD16 /* 41remaster.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = 41remaster.png; sourceTree = SOURCE_ROOT; };
 		522D27BA1D118F2A00E97AC4 /* dreamCalc.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = dreamCalc.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		522D27BE1D118F2A00E97AC4 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		522D27C01D118F2A00E97AC4 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -62,14 +62,21 @@
 		522D27DE1D118F2A00E97AC4 /* dreamCalcUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = dreamCalcUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		522D27E21D118F2A00E97AC4 /* dreamCalcUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = dreamCalcUITests.m; sourceTree = "<group>"; };
 		522D27E41D118F2A00E97AC4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		5266B63E1D1B1A040067C785 /* button.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = button.png; sourceTree = SOURCE_ROOT; };
-		5266B6501D1B25F50067C785 /* 41.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = 41.png; sourceTree = SOURCE_ROOT; };
-		5266B6541D1B2C8D0067C785 /* 1.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = 1.jpg; sourceTree = SOURCE_ROOT; };
-		5266B6621D1B2D770067C785 /* 2.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = 2.jpg; sourceTree = SOURCE_ROOT; };
-		5266B6641D1B2DF40067C785 /* 3.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = 3.jpg; sourceTree = SOURCE_ROOT; };
-		5266B6681D1B375E0067C785 /* 41x21.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = 41x21.png; sourceTree = SOURCE_ROOT; };
-		529B44431D134CD700A8BFA3 /* CalcModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CalcModel.h; path = ../CalcModel.h; sourceTree = "<group>"; };
-		529B44441D134CD700A8BFA3 /* CalcModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CalcModel.m; path = ../CalcModel.m; sourceTree = "<group>"; };
+		527535461D219498006F703B /* SecondViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SecondViewController.h; sourceTree = "<group>"; };
+		527535471D219498006F703B /* SecondViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SecondViewController.m; sourceTree = "<group>"; };
+		5275354F1D227E5B006F703B /* PlotView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PlotView.h; sourceTree = "<group>"; };
+		527535501D227E5B006F703B /* PlotView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PlotView.m; sourceTree = "<group>"; };
+		52D189AF1D1C60BB008A8278 /* roundButtonV1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = roundButtonV1.png; path = GraphicalResources/Buttons/roundButtonV1.png; sourceTree = SOURCE_ROOT; };
+		52D189B01D1C60BB008A8278 /* roundButtonV2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = roundButtonV2.png; path = GraphicalResources/Buttons/roundButtonV2.png; sourceTree = SOURCE_ROOT; };
+		52D189B11D1C60BB008A8278 /* roundButtonV3.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = roundButtonV3.png; path = GraphicalResources/Buttons/roundButtonV3.png; sourceTree = SOURCE_ROOT; };
+		52D189B51D1C60D3008A8278 /* galaxy1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = galaxy1.png; path = GraphicalResources/Backgrounds/galaxy1.png; sourceTree = SOURCE_ROOT; };
+		52D189B61D1C60D3008A8278 /* galaxy2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = galaxy2.png; path = GraphicalResources/Backgrounds/galaxy2.png; sourceTree = SOURCE_ROOT; };
+		52D189B71D1C60D3008A8278 /* girl.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = girl.png; path = GraphicalResources/Backgrounds/girl.png; sourceTree = SOURCE_ROOT; };
+		52D189B81D1C60D3008A8278 /* nature1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = nature1.png; path = GraphicalResources/Backgrounds/nature1.png; sourceTree = SOURCE_ROOT; };
+		52D189BD1D1C615A008A8278 /* CalcModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CalcModel.h; path = SourceCode/CalcModel.h; sourceTree = SOURCE_ROOT; };
+		52D189BE1D1C615A008A8278 /* CalcModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CalcModel.m; path = SourceCode/CalcModel.m; sourceTree = SOURCE_ROOT; };
+		52D189C01D1C631D008A8278 /* UIDesign.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = UIDesign.h; path = SourceCode/UIDesign.h; sourceTree = SOURCE_ROOT; };
+		52D189C11D1C631D008A8278 /* UIDesign.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = UIDesign.m; path = SourceCode/UIDesign.m; sourceTree = SOURCE_ROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -120,20 +127,19 @@
 		522D27BC1D118F2A00E97AC4 /* dreamCalc */ = {
 			isa = PBXGroup;
 			children = (
-				5214E04E1D1C2B250048AD16 /* 41remaster.png */,
-				5214E04A1D1BF97D0048AD16 /* girl.png */,
-				5266B6681D1B375E0067C785 /* 41x21.png */,
-				5266B6641D1B2DF40067C785 /* 3.jpg */,
-				5266B6621D1B2D770067C785 /* 2.jpg */,
-				5266B6541D1B2C8D0067C785 /* 1.jpg */,
-				5266B6501D1B25F50067C785 /* 41.png */,
-				5266B63E1D1B1A040067C785 /* button.png */,
+				52D189A81D1C5EDC008A8278 /* GraphicalResources */,
 				522D27C01D118F2A00E97AC4 /* AppDelegate.h */,
 				522D27C11D118F2A00E97AC4 /* AppDelegate.m */,
-				529B44431D134CD700A8BFA3 /* CalcModel.h */,
-				529B44441D134CD700A8BFA3 /* CalcModel.m */,
+				52D189BD1D1C615A008A8278 /* CalcModel.h */,
+				52D189BE1D1C615A008A8278 /* CalcModel.m */,
+				52D189C01D1C631D008A8278 /* UIDesign.h */,
+				52D189C11D1C631D008A8278 /* UIDesign.m */,
 				522D27C31D118F2A00E97AC4 /* ViewController.h */,
 				522D27C41D118F2A00E97AC4 /* ViewController.m */,
+				527535461D219498006F703B /* SecondViewController.h */,
+				527535471D219498006F703B /* SecondViewController.m */,
+				5275354F1D227E5B006F703B /* PlotView.h */,
+				527535501D227E5B006F703B /* PlotView.m */,
 				522D27C61D118F2A00E97AC4 /* Main.storyboard */,
 				522D27C91D118F2A00E97AC4 /* Assets.xcassets */,
 				522D27CB1D118F2A00E97AC4 /* LaunchScreen.storyboard */,
@@ -167,6 +173,36 @@
 				522D27E41D118F2A00E97AC4 /* Info.plist */,
 			);
 			path = dreamCalcUITests;
+			sourceTree = "<group>";
+		};
+		52D189A81D1C5EDC008A8278 /* GraphicalResources */ = {
+			isa = PBXGroup;
+			children = (
+				52D189AA1D1C5EF4008A8278 /* Backgrounds */,
+				52D189A91D1C5EED008A8278 /* Buttons */,
+			);
+			name = GraphicalResources;
+			sourceTree = "<group>";
+		};
+		52D189A91D1C5EED008A8278 /* Buttons */ = {
+			isa = PBXGroup;
+			children = (
+				52D189AF1D1C60BB008A8278 /* roundButtonV1.png */,
+				52D189B01D1C60BB008A8278 /* roundButtonV2.png */,
+				52D189B11D1C60BB008A8278 /* roundButtonV3.png */,
+			);
+			name = Buttons;
+			sourceTree = "<group>";
+		};
+		52D189AA1D1C5EF4008A8278 /* Backgrounds */ = {
+			isa = PBXGroup;
+			children = (
+				52D189B51D1C60D3008A8278 /* galaxy1.png */,
+				52D189B61D1C60D3008A8278 /* galaxy2.png */,
+				52D189B71D1C60D3008A8278 /* girl.png */,
+				52D189B81D1C60D3008A8278 /* nature1.png */,
+			);
+			name = Backgrounds;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -275,16 +311,15 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				5214E04F1D1C2B250048AD16 /* 41remaster.png in Resources */,
 				522D27CD1D118F2A00E97AC4 /* LaunchScreen.storyboard in Resources */,
-				5214E04B1D1BF97D0048AD16 /* girl.png in Resources */,
-				5266B63F1D1B1A040067C785 /* button.png in Resources */,
-				5266B6631D1B2D770067C785 /* 2.jpg in Resources */,
-				5266B6691D1B375E0067C785 /* 41x21.png in Resources */,
+				52D189BB1D1C60D3008A8278 /* girl.png in Resources */,
+				52D189B31D1C60BB008A8278 /* roundButtonV2.png in Resources */,
+				52D189B21D1C60BB008A8278 /* roundButtonV1.png in Resources */,
+				52D189BC1D1C60D3008A8278 /* nature1.png in Resources */,
+				52D189B41D1C60BB008A8278 /* roundButtonV3.png in Resources */,
+				52D189BA1D1C60D3008A8278 /* galaxy2.png in Resources */,
 				522D27CA1D118F2A00E97AC4 /* Assets.xcassets in Resources */,
-				5266B6651D1B2DF40067C785 /* 3.jpg in Resources */,
-				5266B6521D1B25F50067C785 /* 41.png in Resources */,
-				5266B65B1D1B2C8D0067C785 /* 1.jpg in Resources */,
+				52D189B91D1C60D3008A8278 /* galaxy1.png in Resources */,
 				522D27C81D118F2A00E97AC4 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -310,9 +345,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				527535511D227E5B006F703B /* PlotView.m in Sources */,
+				527535481D219498006F703B /* SecondViewController.m in Sources */,
 				522D27C51D118F2A00E97AC4 /* ViewController.m in Sources */,
 				522D27C21D118F2A00E97AC4 /* AppDelegate.m in Sources */,
-				529B44451D134CD700A8BFA3 /* CalcModel.m in Sources */,
+				52D189BF1D1C615A008A8278 /* CalcModel.m in Sources */,
+				52D189C21D1C631D008A8278 /* UIDesign.m in Sources */,
 				522D27BF1D118F2A00E97AC4 /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
