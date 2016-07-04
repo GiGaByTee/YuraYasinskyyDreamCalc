@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		521D09671D265F6B0079BB86 /* A Day in the Life.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 521D09661D265F6B0079BB86 /* A Day in the Life.mp3 */; };
 		522D27BF1D118F2A00E97AC4 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 522D27BE1D118F2A00E97AC4 /* main.m */; };
 		522D27C21D118F2A00E97AC4 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 522D27C11D118F2A00E97AC4 /* AppDelegate.m */; };
 		522D27C51D118F2A00E97AC4 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 522D27C41D118F2A00E97AC4 /* ViewController.m */; };
@@ -24,8 +25,8 @@
 		52D189BA1D1C60D3008A8278 /* galaxy2.png in Resources */ = {isa = PBXBuildFile; fileRef = 52D189B61D1C60D3008A8278 /* galaxy2.png */; };
 		52D189BB1D1C60D3008A8278 /* girl.png in Resources */ = {isa = PBXBuildFile; fileRef = 52D189B71D1C60D3008A8278 /* girl.png */; };
 		52D189BC1D1C60D3008A8278 /* nature1.png in Resources */ = {isa = PBXBuildFile; fileRef = 52D189B81D1C60D3008A8278 /* nature1.png */; };
-		52D189BF1D1C615A008A8278 /* CalcModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 52D189BE1D1C615A008A8278 /* CalcModel.m */; };
-		52D189C21D1C631D008A8278 /* UIDesign.m in Sources */ = {isa = PBXBuildFile; fileRef = 52D189C11D1C631D008A8278 /* UIDesign.m */; };
+		52D189BF1D1C615A008A8278 /* CalculatorModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 52D189BE1D1C615A008A8278 /* CalculatorModel.m */; };
+		52D189C21D1C631D008A8278 /* UIDesignMethods.m in Sources */ = {isa = PBXBuildFile; fileRef = 52D189C11D1C631D008A8278 /* UIDesignMethods.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -46,6 +47,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		521D09661D265F6B0079BB86 /* A Day in the Life.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = "A Day in the Life.mp3"; path = "../../../../Music/The Beatles/The Beatles 1+ 2015/A Day in the Life.mp3"; sourceTree = "<group>"; };
 		522D27BA1D118F2A00E97AC4 /* dreamCalc.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = dreamCalc.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		522D27BE1D118F2A00E97AC4 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		522D27C01D118F2A00E97AC4 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -73,10 +75,10 @@
 		52D189B61D1C60D3008A8278 /* galaxy2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = galaxy2.png; path = GraphicalResources/Backgrounds/galaxy2.png; sourceTree = SOURCE_ROOT; };
 		52D189B71D1C60D3008A8278 /* girl.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = girl.png; path = GraphicalResources/Backgrounds/girl.png; sourceTree = SOURCE_ROOT; };
 		52D189B81D1C60D3008A8278 /* nature1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = nature1.png; path = GraphicalResources/Backgrounds/nature1.png; sourceTree = SOURCE_ROOT; };
-		52D189BD1D1C615A008A8278 /* CalcModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CalcModel.h; path = SourceCode/CalcModel.h; sourceTree = SOURCE_ROOT; };
-		52D189BE1D1C615A008A8278 /* CalcModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CalcModel.m; path = SourceCode/CalcModel.m; sourceTree = SOURCE_ROOT; };
-		52D189C01D1C631D008A8278 /* UIDesign.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = UIDesign.h; path = SourceCode/UIDesign.h; sourceTree = SOURCE_ROOT; };
-		52D189C11D1C631D008A8278 /* UIDesign.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = UIDesign.m; path = SourceCode/UIDesign.m; sourceTree = SOURCE_ROOT; };
+		52D189BD1D1C615A008A8278 /* CalculatorModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CalculatorModel.h; path = SourceCode/CalculatorModel.h; sourceTree = SOURCE_ROOT; };
+		52D189BE1D1C615A008A8278 /* CalculatorModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CalculatorModel.m; path = SourceCode/CalculatorModel.m; sourceTree = SOURCE_ROOT; };
+		52D189C01D1C631D008A8278 /* UIDesignMethods.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = UIDesignMethods.h; path = SourceCode/UIDesignMethods.h; sourceTree = SOURCE_ROOT; };
+		52D189C11D1C631D008A8278 /* UIDesignMethods.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = UIDesignMethods.m; path = SourceCode/UIDesignMethods.m; sourceTree = SOURCE_ROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -127,19 +129,20 @@
 		522D27BC1D118F2A00E97AC4 /* dreamCalc */ = {
 			isa = PBXGroup;
 			children = (
+				52CAC8A51D2A5DEC006992EB /* AudioResources */,
 				52D189A81D1C5EDC008A8278 /* GraphicalResources */,
 				522D27C01D118F2A00E97AC4 /* AppDelegate.h */,
 				522D27C11D118F2A00E97AC4 /* AppDelegate.m */,
-				52D189BD1D1C615A008A8278 /* CalcModel.h */,
-				52D189BE1D1C615A008A8278 /* CalcModel.m */,
-				52D189C01D1C631D008A8278 /* UIDesign.h */,
-				52D189C11D1C631D008A8278 /* UIDesign.m */,
+				52D189BD1D1C615A008A8278 /* CalculatorModel.h */,
+				52D189BE1D1C615A008A8278 /* CalculatorModel.m */,
 				522D27C31D118F2A00E97AC4 /* ViewController.h */,
 				522D27C41D118F2A00E97AC4 /* ViewController.m */,
 				527535461D219498006F703B /* SecondViewController.h */,
 				527535471D219498006F703B /* SecondViewController.m */,
 				5275354F1D227E5B006F703B /* PlotView.h */,
 				527535501D227E5B006F703B /* PlotView.m */,
+				52D189C01D1C631D008A8278 /* UIDesignMethods.h */,
+				52D189C11D1C631D008A8278 /* UIDesignMethods.m */,
 				522D27C61D118F2A00E97AC4 /* Main.storyboard */,
 				522D27C91D118F2A00E97AC4 /* Assets.xcassets */,
 				522D27CB1D118F2A00E97AC4 /* LaunchScreen.storyboard */,
@@ -173,6 +176,14 @@
 				522D27E41D118F2A00E97AC4 /* Info.plist */,
 			);
 			path = dreamCalcUITests;
+			sourceTree = "<group>";
+		};
+		52CAC8A51D2A5DEC006992EB /* AudioResources */ = {
+			isa = PBXGroup;
+			children = (
+				521D09661D265F6B0079BB86 /* A Day in the Life.mp3 */,
+			);
+			name = AudioResources;
 			sourceTree = "<group>";
 		};
 		52D189A81D1C5EDC008A8278 /* GraphicalResources */ = {
@@ -318,6 +329,7 @@
 				52D189BC1D1C60D3008A8278 /* nature1.png in Resources */,
 				52D189B41D1C60BB008A8278 /* roundButtonV3.png in Resources */,
 				52D189BA1D1C60D3008A8278 /* galaxy2.png in Resources */,
+				521D09671D265F6B0079BB86 /* A Day in the Life.mp3 in Resources */,
 				522D27CA1D118F2A00E97AC4 /* Assets.xcassets in Resources */,
 				52D189B91D1C60D3008A8278 /* galaxy1.png in Resources */,
 				522D27C81D118F2A00E97AC4 /* Main.storyboard in Resources */,
@@ -349,8 +361,8 @@
 				527535481D219498006F703B /* SecondViewController.m in Sources */,
 				522D27C51D118F2A00E97AC4 /* ViewController.m in Sources */,
 				522D27C21D118F2A00E97AC4 /* AppDelegate.m in Sources */,
-				52D189BF1D1C615A008A8278 /* CalcModel.m in Sources */,
-				52D189C21D1C631D008A8278 /* UIDesign.m in Sources */,
+				52D189BF1D1C615A008A8278 /* CalculatorModel.m in Sources */,
+				52D189C21D1C631D008A8278 /* UIDesignMethods.m in Sources */,
 				522D27BF1D118F2A00E97AC4 /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

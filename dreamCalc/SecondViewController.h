@@ -8,43 +8,33 @@
 
 #import <UIKit/UIKit.h>
 #import <UIKit/UIKit.h>
-#import "CalcModel.h"
+#import "CalculatorModel.h"
 #import <QuartzCore/QuartzCore.h>
 #import <AudioToolbox/AudioToolbox.h>
-#import "UIDesign.h"
+#import "UIDesignMethods.h"
 #import "PlotView.h"
+
+#import <AVFoundation/AVFoundation.h>
 
 @interface SecondViewController : UIViewController
 
 
-@property (strong, nonatomic) NSMutableArray* dataToTransferX;
-@property (strong, nonatomic) NSMutableArray* dataToTransferY;
-@property NSInteger dataLength;
-
-@property (strong ,nonatomic) NSString* labelTextTransfer;
-
-
-@property (strong, nonatomic) UIDesign* myUI;
-
+@property (strong ,nonatomic) NSString* labelTextFromFirstView;
 
 @property (weak, nonatomic) IBOutlet UILabel *inputLabel;
 
-- (IBAction)styleChanger:(id)sender;
+@property (weak, nonatomic) IBOutlet UIButton *wallpaperButton;
 
+@property (weak, nonatomic) IBOutlet UILabel *dreamLabel;
 
 @property (weak, nonatomic) IBOutlet UIScrollView *plotScrollView;
-
 
 @property (weak, nonatomic) IBOutlet UIButton *buttonFirstView;
 
 
 - (IBAction)buttonFirstViewTouch:(id)sender;
 
-@property (strong, nonatomic) PlotView* graphView;
-
-@property (weak, nonatomic) IBOutlet UIButton *wallpaperButton;
-
-@property (weak, nonatomic) IBOutlet UILabel *dreamLabel;
+- (IBAction)styleChanger:(id)sender;
 
 
 @end

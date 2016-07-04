@@ -6,9 +6,9 @@
 //  Copyright © 2016 Yura Yasinskyy. All rights reserved.
 //
 
-#import "UIDesign.h"
+#import "UIDesignMethods.h"
 
-@implementation UIDesign
+@implementation UIDesignMethods
 
 - (UIImage *) blurWithCoreImage: (UIImage* ) sourceImage andUIView: (UIView* ) viewToChange {
     
@@ -76,7 +76,7 @@
     
 }
 
-- (void) parallaxImplementor: (NSMutableArray* ) arrayOfViews {
+- (void) parallaxImplementor: (NSArray* ) arrayOfViews {
     
     // Set vertical effect
     UIInterpolatingMotionEffect *verticalMotionEffect =
@@ -107,7 +107,7 @@
     
 }
 
-- (void) calculateXY: (NSMutableArray*) buttonsArray andPreferedRadius: (CGFloat) radius andScreenBounds: (CGRect* ) bounds offset: (NSInteger) offset {
+- (void) positioningObjectsInCircle: (NSArray*) buttonsArray andPreferedRadius: (CGFloat) radius andScreenBounds: (CGRect* ) bounds andVerticalOffset: (NSInteger) offset {
     
     CGFloat rX, rY, c, s;
     CGRect screenBound = *bounds;
@@ -121,7 +121,6 @@
     CGFloat previousY = screenHeight/2 - radius;
     CGFloat calculatedX;
     CGFloat calculatedY;
-    
     
     for (NSInteger i = 1; i < buttonsArray.count; i++) {
         
@@ -140,7 +139,6 @@
     }
     
 }
-
 
 - (void) animationsMaker: (UIView* ) myView duration: (CGFloat) duration speed: (CGFloat) speed {
     

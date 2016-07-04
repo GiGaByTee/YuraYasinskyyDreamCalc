@@ -8,22 +8,25 @@
 
 #import <UIKit/UIKit.h>
 
-#define kGraphHeight 900
-#define kDefaultGraphWidth 900
 
-#define kOffsetX 0
-#define kStepX 50
-#define kGraphBottom 900
-#define kGraphTop 0
-#define kStepY 50
-#define kOffsetY 10
+static const NSInteger defaultGraphHeight = 900;
+static const NSInteger defaultGraphWidth = 900;
+static const NSInteger offsetX = 0;
+static const NSInteger stepX = 50;
+static const NSInteger graphBottom = 900;
+static const NSInteger graphTop = 0;
+static const NSInteger stepY = 50;
+static const NSInteger offsetY = 0;
 
-#define kCircleRadius 3
 
 @interface PlotView : UIView
 
-@property (strong, nonatomic) NSMutableArray* transferedDataX;
-@property (strong, nonatomic) NSMutableArray* transferedDataY;
-@property NSInteger n;
+
+@property (strong, nonatomic) NSArray* transferedDataX;
+
+@property (strong, nonatomic) NSArray* transferedDataY;
+
+@property NSInteger countOfElements;
+
 
 @end

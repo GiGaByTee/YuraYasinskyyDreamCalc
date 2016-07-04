@@ -7,24 +7,21 @@
 //
 
 #import <UIKit/UIKit.h>
-#import "CalcModel.h"
+#import "CalculatorModel.h"
 #import <QuartzCore/QuartzCore.h>
 #import <AudioToolbox/AudioToolbox.h>
-#import "UIDesign.h"
+#import "UIDesignMethods.h"
 #import "SecondViewController.h"
-
-
 
 
 @interface ViewController : UIViewController
 
-@property (strong, nonatomic) NSMutableArray* transferingDataX;
-@property (strong, nonatomic) NSMutableArray* transferingDataY;
+
+@property (strong, nonatomic) NSArray* transferingDataX;
+@property (strong, nonatomic) NSArray* transferingDataY;
 
 @property (weak, nonatomic) IBOutlet UIButton *buttonTabulate;
 
-
-@property (strong, nonatomic) UIDesign* myUI;
 
 //Inner circle of buttons
 @property (weak, nonatomic) IBOutlet UIButton *buttonPlus;
@@ -103,8 +100,8 @@
 
 - (IBAction)buttonZeroTouch:(id)sender;
 
-//Scientific circle of buttons
 
+//Scientific buttons
 @property (weak, nonatomic) IBOutlet UIButton *buttonSin;
 
 @property (weak, nonatomic) IBOutlet UIButton *buttonCos;
@@ -112,6 +109,18 @@
 @property (weak, nonatomic) IBOutlet UIButton *buttonTan;
 
 @property (weak, nonatomic) IBOutlet UIButton *buttonCtg;
+
+@property (weak, nonatomic) IBOutlet UIButton *buttonPower;
+
+@property (weak, nonatomic) IBOutlet UISwitch *scientificSwitch;
+
+@property (weak, nonatomic) IBOutlet UILabel *turboModeLabel;
+
+@property (weak, nonatomic) IBOutlet UIButton *buttonSecondView;
+
+@property (weak, nonatomic) IBOutlet UIButton *buttonX;
+
+@property (weak, nonatomic) IBOutlet UIButton *buttonY;
 
 
 - (IBAction)buttonSinTouch:(id)sender;
@@ -122,29 +131,23 @@
 
 - (IBAction)buttonCtgTouch:(id)sender;
 
-
-@property (weak, nonatomic) IBOutlet UIButton *buttonPower;
-
-
 - (IBAction)buttonPowerTouch:(id)sender;
+
+- (IBAction)scientificFunctionsEnabler:(id)sender;
+
+- (IBAction)showSecondView:(id)sender;
+
+- (IBAction)buttonXTouch:(id)sender;
+
+- (IBAction)buttonYTouch:(id)sender;
 
 
 //Other components
-@property (nonatomic) CGFloat radius;
-
 @property (nonatomic) CGRect screenBound;
-
-@property (nonatomic) CGFloat screenWidth;
-
-@property (nonatomic) CGFloat screenHeight;
-
-@property (nonatomic) NSInteger buttonsCenterOffset;
 
 @property (weak, nonatomic) IBOutlet UILabel *dreamLabel;
 
 @property (weak, nonatomic) IBOutlet UIButton *buttonEquals;
-
-- (IBAction)buttonEqualTouch:(id)sender;
 
 @property (weak, nonatomic) IBOutlet UILabel *inputLabel;
 
@@ -152,56 +155,12 @@
 
 @property (weak, nonatomic) IBOutlet UIButton *styleChanger;
 
+
+- (IBAction)buttonEqualTouch:(id)sender;
+
 - (IBAction)styleChanger:(id)sender;
 
-
-//And a bit more other components
-@property (nonatomic) NSInteger countOfLeftBrackets;
-
-@property (nonatomic) NSInteger countOfRightBrackets;
-
-@property BOOL styleChangeButtonPressed;
-
-@property (weak, nonatomic) IBOutlet UISwitch *scientificSwitch;
-
-- (IBAction)scientificFunctionsEnabler:(id)sender;
-
-@property (strong, nonatomic) NSMutableArray* upperScientificFunctions;
-
-@property (weak, nonatomic) IBOutlet UILabel *turboModeLabel;
-
-@property (strong, nonatomic) NSString* tempInputBuffer;
-
-@property BOOL isSinPressed;
-@property BOOL isCosPressed;
-@property BOOL isTanPressed;
-@property BOOL isCtgPressed;
-
-
-@property (weak, nonatomic) IBOutlet UIButton *buttonSecondView;
-
-- (IBAction)showSecondView:(id)sender;
-
-
-@property (weak, nonatomic) IBOutlet UIButton *buttonX;
-
-- (IBAction)buttonXTouch:(id)sender;
-
-@property (weak, nonatomic) IBOutlet UIButton *buttonY;
-
-- (IBAction)buttonYTouch:(id)sender;
-
-
-
-
 - (IBAction)tabulateButtonTouch:(id)sender;
-
-
-
-
-
-@property BOOL isYPressed;
-
 
 
 @end
