@@ -108,7 +108,7 @@
     
     for (NSInteger i = 0; i < self.countOfElements; i++) {
         
-        if ([[self.transferedDataY objectAtIndex:i] isEqual: [NSNumber numberWithDouble:INFINITY]]) {
+        if ([[self.transferedDataY objectAtIndex:i] isEqual: [NSNumber numberWithDouble:INFINITY]] || [[self.transferedDataY objectAtIndex:i] isEqual: [NSNumber numberWithDouble:NAN]]) {
             
             continue;
         }

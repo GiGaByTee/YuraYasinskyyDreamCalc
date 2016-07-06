@@ -57,6 +57,7 @@
     self.buttonY.hidden = YES;
     self.buttonTabulate.hidden = YES;
     self.algorithmChanger.hidden = NO;
+    self.goToLandscapeButton.hidden = YES;
     
     //Class with UI methods
     self.uiDesignMethods = [[UIDesignMethods alloc] init];
@@ -66,6 +67,11 @@
     [self preferredStatusBarStyle];
     [self setNeedsStatusBarAppearanceUpdate];
     NSLog(@"Statusbar style set.");
+    
+    //Getting size of the screen
+    self.screenBound = [[UIScreen mainScreen] bounds];
+    self.screenWidth = CGRectGetWidth(self.screenBound);
+    self.screenHeight = CGRectGetHeight(self.screenBound);
     
     //Making arrays with views and setting parallax effect
     NSMutableArray* innerCircleButtons = [[NSMutableArray alloc] init];
@@ -121,11 +127,6 @@
     self.view.backgroundColor = [UIColor colorWithPatternImage: myBackgroundImageBlurred];
     NSLog(@"BluredBackground set.\n\n");
     
-    //Getting size of the screen
-    self.screenBound = [[UIScreen mainScreen] bounds];
-    self.screenWidth = CGRectGetWidth(self.screenBound);
-    self.screenHeight = CGRectGetHeight(self.screenBound);
-    
     self.buttonsCenterOffset = 25; //to move button a bit down for a beeter reachebility
     
     //Positioning equals button in the center of the view
@@ -155,7 +156,6 @@
     self.buttonTan.center = CGPointMake(self.buttonCos.center.x+scientificButtonsHorizontalOffset, self.buttonCos.center.y);
     self.buttonCtg.center = CGPointMake(self.buttonTan.center.x+scientificButtonsHorizontalOffset, self.buttonTan.center.y);
     
-
     //Initializing some values
     self.countOfRightBrackets = 0;
     self.countOfLeftBrackets = 0;
@@ -923,6 +923,9 @@
     self.transferingDataX = calcModel.tabulatedXdata;
     self.transferingDataY = calcModel.tabulatedYdata;
     
+}
+
+- (IBAction)goToLandscapeButton:(id)sender {
 }
 
 - (IBAction)styleChanger:(id)sender {

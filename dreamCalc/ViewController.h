@@ -162,6 +162,11 @@
 
 - (IBAction)tabulateButtonTouch:(id)sender;
 
+- (IBAction)goToLandscapeButton:(id)sender;
+
+@property (weak, nonatomic) IBOutlet UIButton *goToLandscapeButton;
+
+
 
 @end
 
