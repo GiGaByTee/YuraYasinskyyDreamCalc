@@ -31,10 +31,18 @@
 
 @property (weak, nonatomic) IBOutlet UIButton *buttonFirstView;
 
+@property (nonatomic) CGRect screenBound;
+
 
 - (IBAction)buttonFirstViewTouch:(id)sender;
 
 - (IBAction)styleChanger:(id)sender;
+
+
+
+@property (weak, nonatomic) IBOutlet UIView *dreamLabelAndStChanger;
+
+
 
 
 @end

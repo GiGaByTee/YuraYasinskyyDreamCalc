@@ -162,9 +162,14 @@
 
 - (IBAction)tabulateButtonTouch:(id)sender;
 
-- (IBAction)goToLandscapeButton:(id)sender;
 
-@property (weak, nonatomic) IBOutlet UIButton *goToLandscapeButton;
+@property (strong, nonatomic) IBOutlet UIView *portrairView;
+
+
+
+@property (weak, nonatomic) IBOutlet UIView *turboLabelAndScSwitchView;
+
+@property (weak, nonatomic) IBOutlet UIView *dreamLabelAndStyleCh;
 
 
 

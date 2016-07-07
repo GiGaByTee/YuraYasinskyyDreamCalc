@@ -84,8 +84,7 @@
             NSString *labelsText = [NSString stringWithFormat:@"%@", @"0"];
             [labelsText drawAtPoint:CGPointMake((offsetX + i * stepX)+3, graphBottom - defaultGraphHeight/2) withAttributes:0];
         }
-//        NSString *labelsText = [NSString stringWithFormat:@"%d", i];
-//        [labelsText drawAtPoint:CGPointMake((offsetX + i * stepX)+3, graphBottom - defaultGraphHeight/2) withAttributes:0];
+
     }
 
 }

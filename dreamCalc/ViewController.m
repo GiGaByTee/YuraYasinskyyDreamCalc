@@ -31,7 +31,14 @@
 
 @property (strong, nonatomic) NSMutableArray* upperScientificFunctions;
 
+@property (strong, nonatomic) NSMutableArray* innerCircleButtons;
+
+@property (strong, nonatomic) NSMutableArray* outerCircleButtons;
+
+@property (strong, nonatomic) NSMutableArray* otherViews;
+
 @property BOOL styleChangeButtonPressed;
+
 
 
 @end
@@ -39,6 +46,7 @@
 
 
 @implementation ViewController
+
 
 
 - (void)viewDidLoad {
@@ -57,7 +65,6 @@
     self.buttonY.hidden = YES;
     self.buttonTabulate.hidden = YES;
     self.algorithmChanger.hidden = NO;
-    self.goToLandscapeButton.hidden = YES;
     
     //Class with UI methods
     self.uiDesignMethods = [[UIDesignMethods alloc] init];
@@ -74,27 +81,27 @@
     self.screenHeight = CGRectGetHeight(self.screenBound);
     
     //Making arrays with views and setting parallax effect
-    NSMutableArray* innerCircleButtons = [[NSMutableArray alloc] init];
-    [innerCircleButtons addObject: self.buttonPlus];
-    [innerCircleButtons addObject: self.buttonMinus];
-    [innerCircleButtons addObject: self.buttonMultiply];
-    [innerCircleButtons addObject: self.buttonDivide];
-    [innerCircleButtons addObject: self.buttonComma];
-    [innerCircleButtons addObject: self.buttonErase];
-    [innerCircleButtons addObject: self.buttonBracketRight];
-    [innerCircleButtons addObject: self.buttonBracketLeft];
+    self.innerCircleButtons = [[NSMutableArray alloc] init];
+    [self.innerCircleButtons addObject: self.buttonPlus];
+    [self.innerCircleButtons addObject: self.buttonMinus];
+    [self.innerCircleButtons addObject: self.buttonMultiply];
+    [self.innerCircleButtons addObject: self.buttonDivide];
+    [self.innerCircleButtons addObject: self.buttonComma];
+    [self.innerCircleButtons addObject: self.buttonErase];
+    [self.innerCircleButtons addObject: self.buttonBracketRight];
+    [self.innerCircleButtons addObject: self.buttonBracketLeft];
     
-    NSMutableArray* outerCircleButtons = [[NSMutableArray alloc] init];
-    [outerCircleButtons addObject: self.buttonTwo];
-    [outerCircleButtons addObject: self.buttonThree];
-    [outerCircleButtons addObject: self.buttonFour];
-    [outerCircleButtons addObject: self.buttonFive];
-    [outerCircleButtons addObject: self.buttonSix];
-    [outerCircleButtons addObject: self.buttonSeven];
-    [outerCircleButtons addObject: self.buttonEight];
-    [outerCircleButtons addObject: self.buttonNine];
-    [outerCircleButtons addObject: self.buttonZero];
-    [outerCircleButtons addObject: self.buttonOne];
+    self.outerCircleButtons = [[NSMutableArray alloc] init];
+    [self.outerCircleButtons addObject: self.buttonTwo];
+    [self.outerCircleButtons addObject: self.buttonThree];
+    [self.outerCircleButtons addObject: self.buttonFour];
+    [self.outerCircleButtons addObject: self.buttonFive];
+    [self.outerCircleButtons addObject: self.buttonSix];
+    [self.outerCircleButtons addObject: self.buttonSeven];
+    [self.outerCircleButtons addObject: self.buttonEight];
+    [self.outerCircleButtons addObject: self.buttonNine];
+    [self.outerCircleButtons addObject: self.buttonZero];
+    [self.outerCircleButtons addObject: self.buttonOne];
     
     self.upperScientificFunctions = [[NSMutableArray alloc] init];
     [self.upperScientificFunctions addObject: self.buttonSin];
@@ -106,28 +113,30 @@
     [self.upperScientificFunctions addObject: self.buttonX];
     [self.upperScientificFunctions addObject: self.buttonSecondView];
     
-    NSMutableArray* otherViews = [[NSMutableArray alloc] init]; //labels etc.
-    [otherViews addObject: self.dreamLabel];
-    [otherViews addObject: self.inputLabel];
-    [otherViews addObject: self.algorithmChanger];
-    [otherViews addObject: self.styleChanger];
-    [otherViews addObject: self.buttonEquals];
-    [otherViews addObject: self.scientificSwitch];
-    [otherViews addObject: self.turboModeLabel];
+    self.otherViews = [[NSMutableArray alloc] init]; //labels etc.
+    [self.otherViews addObject: self.dreamLabel];
+    [self.otherViews addObject: self.inputLabel];
+    [self.otherViews addObject: self.algorithmChanger];
+    [self.otherViews addObject: self.styleChanger];
+    [self.otherViews addObject: self.buttonEquals];
+    [self.otherViews addObject: self.scientificSwitch];
+    [self.otherViews addObject: self.turboModeLabel];
 
-    [self.uiDesignMethods parallaxImplementor: [innerCircleButtons copy]];
-    [self.uiDesignMethods parallaxImplementor: [outerCircleButtons copy]];
+    [self.uiDesignMethods parallaxImplementor: [self.innerCircleButtons copy]];
+    [self.uiDesignMethods parallaxImplementor: [self.outerCircleButtons copy]];
     [self.uiDesignMethods parallaxImplementor: [self.upperScientificFunctions copy]];
-    [self.uiDesignMethods parallaxImplementor: [otherViews copy]];
+    [self.uiDesignMethods parallaxImplementor: [self.otherViews copy]];
     NSLog(@"Parallax effect set.");
     
     //Setting blured background image
-    UIImage* myBackgroundImage = [UIImage imageNamed:@"nature1.png"];
-    UIImage *myBackgroundImageBlurred = [self.uiDesignMethods blurWithCoreImage: myBackgroundImage andUIView: self.view];
-    self.view.backgroundColor = [UIColor colorWithPatternImage: myBackgroundImageBlurred];
+    UIImage* myBackgroundImage = [UIImage imageNamed:@"galaxy2.png"];
+    myBackgroundImage = [UIImage imageNamed:@"galaxy.jpg"];
+    
+    //UIImage *myBackgroundImageBlurred = [self.uiDesignMethods blurWithCoreImage: myBackgroundImage andUIView: self.view];
+    self.view.backgroundColor = [UIColor colorWithPatternImage: myBackgroundImage];
     NSLog(@"BluredBackground set.\n\n");
     
-    self.buttonsCenterOffset = 25; //to move button a bit down for a beeter reachebility
+    self.buttonsCenterOffset = self.screenHeight/26.68; //to move button a bit down for a beeter reachebility
     
     //Positioning equals button in the center of the view
     self.buttonEquals.center = CGPointMake(self.screenWidth/2, self.screenHeight/2+self.buttonsCenterOffset); //centering '=' button
@@ -135,13 +144,13 @@
     //Positioning inner circle buttons
     self.radius = 64.0;
     self.buttonPlus.center = CGPointMake(self.screenWidth/2, self.screenHeight/2 - self.radius+self.buttonsCenterOffset); //centering '+' button relatively '='
-    [self.uiDesignMethods positioningObjectsInCircle:innerCircleButtons andPreferedRadius:self.radius andScreenBounds:&(_screenBound) andVerticalOffset:self.buttonsCenterOffset];
+    [self.uiDesignMethods positioningObjectsInCircle:self.innerCircleButtons andPreferedRadius:self.radius andScreenBounds:&(_screenBound) andVerticalOffset:self.buttonsCenterOffset];
     NSLog(@"Inner circle of buttons formed.\n\n");
     
     //Positioning outer circle buttons
     self.radius = 125.0;
     self.buttonTwo.center = CGPointMake(self.screenWidth/2, self.screenHeight/2 - self.radius+self.buttonsCenterOffset); //centering '2' button relatively '='
-    [self.uiDesignMethods positioningObjectsInCircle:outerCircleButtons andPreferedRadius:self.radius andScreenBounds:&(_screenBound) andVerticalOffset:self.buttonsCenterOffset];
+    [self.uiDesignMethods positioningObjectsInCircle:self.outerCircleButtons andPreferedRadius:self.radius andScreenBounds:&(_screenBound) andVerticalOffset:self.buttonsCenterOffset];
     NSLog(@"Outer circle of buttons formed.\n\n");
     
     //Positioning scientific buttons
@@ -156,18 +165,128 @@
     self.buttonTan.center = CGPointMake(self.buttonCos.center.x+scientificButtonsHorizontalOffset, self.buttonCos.center.y);
     self.buttonCtg.center = CGPointMake(self.buttonTan.center.x+scientificButtonsHorizontalOffset, self.buttonTan.center.y);
     
+    
+    self.inputLabel.center = CGPointMake(self.screenWidth/2, self.buttonTwo.center.y - self.screenHeight/5.60504);
+    self.algorithmChanger.center = CGPointMake(self.screenWidth/2, self.buttonSeven.center.y + self.screenHeight/6.35238);
+    self.turboLabelAndScSwitchView.center = CGPointMake(self.screenWidth/2, self.algorithmChanger.center.y + self.screenHeight/15.881);
+    self.dreamLabelAndStyleCh.center = CGPointMake(self.screenWidth/2, self.inputLabel.center.y - self.screenHeight/10.5873);
+    
     //Initializing some values
     self.countOfRightBrackets = 0;
     self.countOfLeftBrackets = 0;
     self.inputLabel.text = @"0";
     
+    
+    
     // Do any additional setup after loading the view, typically from a nib.
+    
+    
 }
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
 }
+
+-(void)willRotateToInterfaceOrientation: (UIInterfaceOrientation)orientation duration:(NSTimeInterval)duration {
+    
+    
+    
+    if ((orientation == UIInterfaceOrientationLandscapeLeft) || (orientation == UIInterfaceOrientationLandscapeRight)) {
+    
+        
+        self.buttonsCenterOffset = 0;
+        NSInteger buttonsHorizontalOffset = 150;
+        
+
+        NSInteger temp;
+        temp = self.screenHeight;
+        self.screenHeight=self.screenWidth;
+        self.screenWidth=temp;
+        
+        self.screenBound = CGRectMake(0, 0, self.screenWidth+buttonsHorizontalOffset*2, self.screenHeight);
+        
+        //Positioning equals button in the center of the view
+        self.buttonEquals.center = CGPointMake(self.screenWidth/2+buttonsHorizontalOffset, self.screenHeight/2+self.buttonsCenterOffset); //centering '=' button
+        
+        //Positioning inner circle buttons
+        self.radius = 64.0;
+        self.buttonPlus.center = CGPointMake(self.screenWidth/2+buttonsHorizontalOffset, self.screenHeight/2 - self.radius+self.buttonsCenterOffset); //centering '+' button relatively '='
+        [self.uiDesignMethods positioningObjectsInCircle:self.innerCircleButtons andPreferedRadius:self.radius andScreenBounds:&(_screenBound) andVerticalOffset:self.buttonsCenterOffset];
+        NSLog(@"Inner circle of buttons formed in landscape.\n\n");
+        
+        //Positioning outer circle buttons
+        self.radius = 125.0;
+        self.buttonTwo.center = CGPointMake(self.screenWidth/2+buttonsHorizontalOffset, self.screenHeight/2 - self.radius+self.buttonsCenterOffset); //centering '2' button relatively '='
+        [self.uiDesignMethods positioningObjectsInCircle:self.outerCircleButtons andPreferedRadius:self.radius andScreenBounds:&(_screenBound) andVerticalOffset:self.buttonsCenterOffset];
+        NSLog(@"Outer circle of buttons formed in landscape.\n\n");
+        
+        self.inputLabel.center = CGPointMake(self.buttonOne.center.x-230, self.buttonOne.center.y-15);
+        self.dreamLabelAndStyleCh.center = CGPointMake(self.inputLabel.center.x, self.inputLabel.center.y - self.screenHeight/10.5873-15);
+        self.algorithmChanger.center = CGPointMake(self.inputLabel.center.x, self.buttonSeven.center.y-15);
+        self.turboLabelAndScSwitchView.center = CGPointMake(self.inputLabel.center.x, self.algorithmChanger.center.y + self.screenHeight/15.881+15);
+        
+        //Positioning scientific buttons
+        NSInteger scientificButtonsHorizontalOffset = 50;
+        NSInteger scientificButtonsVerticalOffset = 81;
+        self.buttonPower.center = CGPointMake(self.algorithmChanger.frame.origin.x+20, self.buttonZero.center.y);
+        self.buttonY.center = CGPointMake(self.buttonPower.center.x+scientificButtonsHorizontalOffset, self.buttonPower.center.y);
+        self.buttonX.center = CGPointMake(self.buttonY.center.x+scientificButtonsHorizontalOffset, self.buttonY.center.y);
+        self.buttonSecondView.center = CGPointMake(self.buttonX.center.x+scientificButtonsHorizontalOffset, self.buttonX.center.y);
+        
+        self.buttonSin.center = CGPointMake(self.buttonPower.center.x, self.buttonPower.center.y + scientificButtonsVerticalOffset);
+        self.buttonCos.center = CGPointMake(self.buttonSin.center.x+scientificButtonsHorizontalOffset, self.buttonSin.center.y);
+        self.buttonTan.center = CGPointMake(self.buttonCos.center.x+scientificButtonsHorizontalOffset, self.buttonCos.center.y);
+        self.buttonCtg.center = CGPointMake(self.buttonTan.center.x+scientificButtonsHorizontalOffset, self.buttonTan.center.y);
+        
+        
+        temp = self.screenHeight;
+        self.screenHeight=self.screenWidth;
+        self.screenWidth=temp;
+        self.screenBound = CGRectMake(0, 0, self.screenWidth, self.screenHeight);
+        
+    }
+    else {
+        
+        self.buttonsCenterOffset = self.screenHeight/26.68; //to move button a bit down for a beeter reachebility
+        
+        //Positioning equals button in the center of the view
+        self.buttonEquals.center = CGPointMake(self.screenWidth/2, self.screenHeight/2+self.buttonsCenterOffset); //centering '=' button
+        
+        //Positioning inner circle buttons
+        self.radius = 64.0;
+        self.buttonPlus.center = CGPointMake(self.screenWidth/2, self.screenHeight/2 - self.radius+self.buttonsCenterOffset); //centering '+' button relatively '='
+        [self.uiDesignMethods positioningObjectsInCircle:self.innerCircleButtons andPreferedRadius:self.radius andScreenBounds:&(_screenBound) andVerticalOffset:self.buttonsCenterOffset];
+        NSLog(@"Inner circle of buttons formed.\n\n");
+        
+        //Positioning outer circle buttons
+        self.radius = 125.0;
+        self.buttonTwo.center = CGPointMake(self.screenWidth/2, self.screenHeight/2 - self.radius+self.buttonsCenterOffset); //centering '2' button relatively '='
+        [self.uiDesignMethods positioningObjectsInCircle:self.outerCircleButtons andPreferedRadius:self.radius andScreenBounds:&(_screenBound) andVerticalOffset:self.buttonsCenterOffset];
+        NSLog(@"Outer circle of buttons formed.\n\n");
+        
+        //Positioning scientific buttons
+        NSInteger scientificButtonsHorizontalOffset = 50;
+        NSInteger scientificButtonsVerticalOffset = 81;
+        self.buttonPower.center = CGPointMake(self.buttonOne.center.x-1, self.buttonOne.center.y-scientificButtonsVerticalOffset);
+        self.buttonY.center = CGPointMake(self.buttonPower.center.x+scientificButtonsHorizontalOffset, self.buttonPower.center.y);
+        self.buttonX.center = CGPointMake(self.buttonY.center.x+scientificButtonsHorizontalOffset, self.buttonY.center.y);
+        self.buttonSecondView.center = CGPointMake(self.buttonX.center.x+scientificButtonsHorizontalOffset, self.buttonX.center.y);
+        self.buttonSin.center = CGPointMake(self.buttonEight.center.x-1, self.buttonEight.center.y+scientificButtonsVerticalOffset);
+        self.buttonCos.center = CGPointMake(self.buttonSin.center.x+scientificButtonsHorizontalOffset, self.buttonSin.center.y);
+        self.buttonTan.center = CGPointMake(self.buttonCos.center.x+scientificButtonsHorizontalOffset, self.buttonCos.center.y);
+        self.buttonCtg.center = CGPointMake(self.buttonTan.center.x+scientificButtonsHorizontalOffset, self.buttonTan.center.y);
+        
+        
+        self.inputLabel.center = CGPointMake(self.screenWidth/2, self.buttonTwo.center.y - self.screenHeight/5.60504);
+        self.algorithmChanger.center = CGPointMake(self.screenWidth/2, self.buttonSeven.center.y + self.screenHeight/6.35238);
+        self.turboLabelAndScSwitchView.center = CGPointMake(self.screenWidth/2, self.algorithmChanger.center.y + self.screenHeight/15.881);
+        self.dreamLabelAndStyleCh.center = CGPointMake(self.screenWidth/2, self.inputLabel.center.y - self.screenHeight/10.5873);
+        
+        
+    }
+}
+
 
 -(void) tapRecognizer:(UIGestureRecognizer *) sender {
         
@@ -185,6 +304,7 @@
         NSString *tempSubString = [self.inputLabel.text substringToIndex:[self.inputLabel.text length]-1];
         self.inputLabel.text = tempSubString;
     }
+
 }
 
 - (UIStatusBarStyle) preferredStatusBarStyle {
@@ -936,9 +1056,9 @@
     if (self.styleChangeButtonPressed == YES) {
         
         
-        UIImage* myBackgroundImage = [UIImage imageNamed: @"nature1.png"];
-        UIImage *myBackgroundImageBlurred = [self.uiDesignMethods blurWithCoreImage: myBackgroundImage andUIView: self.view];
-        self.view.backgroundColor = [UIColor colorWithPatternImage: myBackgroundImageBlurred];
+        UIImage* myBackgroundImage = [UIImage imageNamed: @"galaxy.jpg"];
+        //UIImage *myBackgroundImageBlurred = [self.uiDesignMethods blurWithCoreImage: myBackgroundImage andUIView: self.view];
+        self.view.backgroundColor = [UIColor colorWithPatternImage: myBackgroundImage];
         NSLog(@"Blured background set!\n\n");
         
         [self.uiDesignMethods animationsMaker: self.view duration: 0.20 speed: 0.50];
@@ -948,9 +1068,9 @@
     }
     else {
         
-        UIImage* myBackgroundImage = [UIImage imageNamed: @"girl.png"];
-        UIImage *myBackgroundImageBlurred = [self.uiDesignMethods blurWithCoreImage: myBackgroundImage andUIView: self.view];
-        self.view.backgroundColor = [UIColor colorWithPatternImage:myBackgroundImageBlurred];
+        UIImage* myBackgroundImage = [UIImage imageNamed: @"wood1.png"];
+        //UIImage *myBackgroundImageBlurred = [self.uiDesignMethods blurWithCoreImage: myBackgroundImage andUIView: self.view];
+        self.view.backgroundColor = [UIColor colorWithPatternImage:myBackgroundImage];
         NSLog(@"Blured background set!\n\n");
         
         [self.uiDesignMethods animationsMaker: self.view duration: 0.20 speed: 0.50];

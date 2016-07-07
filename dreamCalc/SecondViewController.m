@@ -23,6 +23,11 @@
 
 @property (strong, nonatomic) PlotView* graphView;
 
+
+@property (nonatomic) CGFloat screenWidth;
+
+@property (nonatomic) CGFloat screenHeight;
+
 @end
 
 
@@ -32,14 +37,20 @@
     [super viewDidLoad];
 
     
+    //Getting size of the screen
+    self.screenBound = [[UIScreen mainScreen] bounds];
+    self.screenWidth = CGRectGetWidth(self.screenBound);
+    self.screenHeight = CGRectGetHeight(self.screenBound);
+    
+    
     self.uiDesignMethods = [[UIDesignMethods alloc] init];
     //Class with UI methods
     NSLog(@"Second view UI class initialised.");
     
     //Setting blured background image
-    UIImage* myBackgroundImage = [UIImage imageNamed:@"galaxy1.png"];
-    UIImage *myBackgroundImageBlurred = [self.uiDesignMethods blurWithCoreImage: myBackgroundImage andUIView: self.view];
-    self.view.backgroundColor = [UIColor colorWithPatternImage: myBackgroundImageBlurred];
+    UIImage* myBackgroundImage = [UIImage imageNamed:@"galaxy.jpg"];
+    //UIImage *myBackgroundImageBlurred = [self.uiDesignMethods blurWithCoreImage: myBackgroundImage andUIView: self.view];
+    self.view.backgroundColor = [UIColor colorWithPatternImage: myBackgroundImage];
     NSLog(@"Second View Blured Background set.");
     
     //Sets white statusbar text color
@@ -60,7 +71,6 @@
     NSLog(@"Graph subView to scrollView added.");
     
     self.plotScrollView.contentSize = CGSizeMake(defaultGraphWidth, defaultGraphHeight);
-    [self.plotScrollView setContentOffset:CGPointMake(285, 215)];
     UIPinchGestureRecognizer *twoFingerPinch = [[UIPinchGestureRecognizer alloc] initWithTarget:self action:@selector(twoFingerPinch:)];
     [self.graphView addGestureRecognizer:twoFingerPinch];
     
@@ -68,12 +78,93 @@
     NSMutableArray* forParallax = [[NSMutableArray alloc] init];
     [forParallax addObject: self.graphView];
     [self.uiDesignMethods parallaxImplementor:[forParallax copy]];
+    
+    CGRect sizeFrame;
+    sizeFrame.size = CGSizeMake(self.screenWidth/1.13982, self.screenHeight/1.64691);
+    self.plotScrollView.frame = sizeFrame;
+    
+    [self.plotScrollView setContentOffset:CGPointMake(self.plotScrollView.frame.size.width/1.15439, self.plotScrollView.frame.size.height/1.88372)];
+    
+    
+    
+    self.plotScrollView.center = CGPointMake(self.screenWidth/2, self.screenHeight/1.85021);
+    self.inputLabel.center = CGPointMake(self.screenWidth/2, self.plotScrollView.center.y - self.screenHeight/2.71138);
+    self.dreamLabelAndStChanger.center = CGPointMake(self.screenWidth/2+15, self.inputLabel.center.y - self.screenHeight/10.504);
+    self.buttonFirstView.center = CGPointMake(self.screenWidth/2, self.plotScrollView.center.y + self.screenHeight/2.65209);
+    
+    
+    NSLog(@"screen width %g", self.screenWidth);
+    NSLog(@"screen heigth %g", self.screenHeight);
+    
+    
 }
 
 - (void) viewWillAppear:(BOOL)animated {
     [super viewWillAppear:YES];
     
 }
+
+
+-(void)willRotateToInterfaceOrientation: (UIInterfaceOrientation)orientation duration:(NSTimeInterval)duration {
+    
+    
+    if ((orientation == UIInterfaceOrientationLandscapeLeft) || (orientation == UIInterfaceOrientationLandscapeRight)) {
+        
+        
+        NSInteger temp;
+        temp = self.screenHeight;
+        self.screenHeight=self.screenWidth;
+        self.screenWidth=temp;
+        
+        CGRect sizeFrame;
+        sizeFrame.size = CGSizeMake(self.screenWidth/1.13982, self.screenHeight/1.13982);//1.64691);
+        self.plotScrollView.frame = sizeFrame;
+        
+        [self.plotScrollView setContentOffset:CGPointMake(self.plotScrollView.frame.size.width/1.15439, self.plotScrollView.frame.size.height/1.88372)];
+
+        self.plotScrollView.center = CGPointMake(self.screenWidth/2, self.screenHeight/2);
+        
+        
+        self.inputLabel.center = CGPointMake(self.screenWidth/2, self.plotScrollView.center.y - self.screenHeight/2.71138);
+        self.dreamLabelAndStChanger.center = CGPointMake(self.screenWidth/2+15, self.inputLabel.center.y - self.screenHeight/10.504);
+        self.buttonFirstView.center = CGPointMake(self.screenWidth/2, self.plotScrollView.center.y + self.screenHeight/2.65209);
+        
+        self.buttonFirstView.hidden = YES;
+        self.dreamLabelAndStChanger.hidden= YES;
+        self.inputLabel.hidden = YES;
+        
+        
+        temp = self.screenHeight;
+        self.screenHeight=self.screenWidth;
+        self.screenWidth=temp;
+        
+    }
+    else {
+        
+        
+        CGRect sizeFrame;
+        sizeFrame.size = CGSizeMake(self.screenWidth/1.13982, self.screenHeight/1.64691);
+        self.plotScrollView.frame = sizeFrame;
+        
+        [self.plotScrollView setContentOffset:CGPointMake(self.plotScrollView.frame.size.width/1.15439, self.plotScrollView.frame.size.height/1.88372)];
+        
+        
+        
+        self.plotScrollView.center = CGPointMake(self.screenWidth/2, self.screenHeight/1.85021);
+        self.inputLabel.center = CGPointMake(self.screenWidth/2, self.plotScrollView.center.y - self.screenHeight/2.71138);
+        self.dreamLabelAndStChanger.center = CGPointMake(self.screenWidth/2+15, self.inputLabel.center.y - self.screenHeight/10.504);
+        self.buttonFirstView.center = CGPointMake(self.screenWidth/2, self.plotScrollView.center.y + self.screenHeight/2.65209);
+        
+        
+        self.buttonFirstView.hidden = NO;
+        self.dreamLabelAndStChanger.hidden= NO;
+        self.inputLabel.hidden = NO;
+        
+    }
+}
+
+
+
 
 
 -(void) calculatingDataForPlots: (NSString*) functionInString {
@@ -87,7 +178,7 @@
     //Tabulation params
     NSInteger a = -15;
     NSInteger b = 15;
-    CGFloat step = 0.5;
+    CGFloat step = 0.2;
     
     NSString* stringAfterRegex;
     
