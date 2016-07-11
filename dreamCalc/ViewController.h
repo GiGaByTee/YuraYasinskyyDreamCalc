@@ -6,40 +6,36 @@
 //  Copyright © 2016 Yura Yasinskyy. All rights reserved.
 //
 
+#import <AudioToolbox/AudioToolbox.h>
+#import <QuartzCore/QuartzCore.h>
 #import <UIKit/UIKit.h>
 #import "CalculatorModel.h"
-#import <QuartzCore/QuartzCore.h>
-#import <AudioToolbox/AudioToolbox.h>
-#import "UIDesignMethods.h"
 #import "SecondViewController.h"
-
+#import "UIDesignMethods.h"
 
 @interface ViewController : UIViewController
 
+@property(strong, nonatomic) NSArray *transferingDataX;
+@property(strong, nonatomic) NSArray *transferingDataY;
 
-@property (strong, nonatomic) NSArray* transferingDataX;
-@property (strong, nonatomic) NSArray* transferingDataY;
+@property(weak, nonatomic) IBOutlet UIButton *buttonTabulate;
 
-@property (weak, nonatomic) IBOutlet UIButton *buttonTabulate;
+// Inner circle of buttons
+@property(weak, nonatomic) IBOutlet UIButton *buttonPlus;
 
+@property(weak, nonatomic) IBOutlet UIButton *buttonMinus;
 
-//Inner circle of buttons
-@property (weak, nonatomic) IBOutlet UIButton *buttonPlus;
+@property(weak, nonatomic) IBOutlet UIButton *buttonMultiply;
 
-@property (weak, nonatomic) IBOutlet UIButton *buttonMinus;
+@property(weak, nonatomic) IBOutlet UIButton *buttonDivide;
 
-@property (weak, nonatomic) IBOutlet UIButton *buttonMultiply;
+@property(weak, nonatomic) IBOutlet UIButton *buttonComma;
 
-@property (weak, nonatomic) IBOutlet UIButton *buttonDivide;
+@property(weak, nonatomic) IBOutlet UIButton *buttonErase;
 
-@property (weak, nonatomic) IBOutlet UIButton *buttonComma;
+@property(weak, nonatomic) IBOutlet UIButton *buttonBracketRight;
 
-@property (weak, nonatomic) IBOutlet UIButton *buttonErase;
-
-@property (weak, nonatomic) IBOutlet UIButton *buttonBracketRight;
-
-@property (weak, nonatomic) IBOutlet UIButton *buttonBracketLeft;
-
+@property(weak, nonatomic) IBOutlet UIButton *buttonBracketLeft;
 
 - (IBAction)buttonPlusTouch:(id)sender;
 
@@ -57,28 +53,26 @@
 
 - (IBAction)buttonLeftBracketTouch:(id)sender;
 
+// Outer circle of buttons
+@property(weak, nonatomic) IBOutlet UIButton *buttonOne;
 
-//Outer circle of buttons
-@property (weak, nonatomic) IBOutlet UIButton *buttonOne;
+@property(weak, nonatomic) IBOutlet UIButton *buttonTwo;
 
-@property (weak, nonatomic) IBOutlet UIButton *buttonTwo;
+@property(weak, nonatomic) IBOutlet UIButton *buttonThree;
 
-@property (weak, nonatomic) IBOutlet UIButton *buttonThree;
+@property(weak, nonatomic) IBOutlet UIButton *buttonFour;
 
-@property (weak, nonatomic) IBOutlet UIButton *buttonFour;
+@property(weak, nonatomic) IBOutlet UIButton *buttonFive;
 
-@property (weak, nonatomic) IBOutlet UIButton *buttonFive;
+@property(weak, nonatomic) IBOutlet UIButton *buttonSix;
 
-@property (weak, nonatomic) IBOutlet UIButton *buttonSix;
+@property(weak, nonatomic) IBOutlet UIButton *buttonSeven;
 
-@property (weak, nonatomic) IBOutlet UIButton *buttonSeven;
+@property(weak, nonatomic) IBOutlet UIButton *buttonEight;
 
-@property (weak, nonatomic) IBOutlet UIButton *buttonEight;
+@property(weak, nonatomic) IBOutlet UIButton *buttonNine;
 
-@property (weak, nonatomic) IBOutlet UIButton *buttonNine;
-
-@property (weak, nonatomic) IBOutlet UIButton *buttonZero;
-
+@property(weak, nonatomic) IBOutlet UIButton *buttonZero;
 
 - (IBAction)buttonOneTouch:(id)sender;
 
@@ -100,28 +94,26 @@
 
 - (IBAction)buttonZeroTouch:(id)sender;
 
+// Scientific buttons
+@property(weak, nonatomic) IBOutlet UIButton *buttonSin;
 
-//Scientific buttons
-@property (weak, nonatomic) IBOutlet UIButton *buttonSin;
+@property(weak, nonatomic) IBOutlet UIButton *buttonCos;
 
-@property (weak, nonatomic) IBOutlet UIButton *buttonCos;
+@property(weak, nonatomic) IBOutlet UIButton *buttonTan;
 
-@property (weak, nonatomic) IBOutlet UIButton *buttonTan;
+@property(weak, nonatomic) IBOutlet UIButton *buttonCtg;
 
-@property (weak, nonatomic) IBOutlet UIButton *buttonCtg;
+@property(weak, nonatomic) IBOutlet UIButton *buttonPower;
 
-@property (weak, nonatomic) IBOutlet UIButton *buttonPower;
+@property(weak, nonatomic) IBOutlet UISwitch *scientificSwitch;
 
-@property (weak, nonatomic) IBOutlet UISwitch *scientificSwitch;
+@property(weak, nonatomic) IBOutlet UILabel *turboModeLabel;
 
-@property (weak, nonatomic) IBOutlet UILabel *turboModeLabel;
+@property(weak, nonatomic) IBOutlet UIButton *buttonSecondView;
 
-@property (weak, nonatomic) IBOutlet UIButton *buttonSecondView;
+@property(weak, nonatomic) IBOutlet UIButton *buttonX;
 
-@property (weak, nonatomic) IBOutlet UIButton *buttonX;
-
-@property (weak, nonatomic) IBOutlet UIButton *buttonY;
-
+@property(weak, nonatomic) IBOutlet UIButton *buttonY;
 
 - (IBAction)buttonSinTouch:(id)sender;
 
@@ -141,20 +133,18 @@
 
 - (IBAction)buttonYTouch:(id)sender;
 
+// Other components
+@property(nonatomic) CGRect screenBound;
 
-//Other components
-@property (nonatomic) CGRect screenBound;
+@property(weak, nonatomic) IBOutlet UILabel *dreamLabel;
 
-@property (weak, nonatomic) IBOutlet UILabel *dreamLabel;
+@property(weak, nonatomic) IBOutlet UIButton *buttonEquals;
 
-@property (weak, nonatomic) IBOutlet UIButton *buttonEquals;
+@property(weak, nonatomic) IBOutlet UILabel *inputLabel;
 
-@property (weak, nonatomic) IBOutlet UILabel *inputLabel;
+@property(weak, nonatomic) IBOutlet UISegmentedControl *algorithmChanger;
 
-@property (weak, nonatomic) IBOutlet UISegmentedControl *algorithmChanger;
-
-@property (weak, nonatomic) IBOutlet UIButton *styleChanger;
-
+@property(weak, nonatomic) IBOutlet UIButton *styleChanger;
 
 - (IBAction)buttonEqualTouch:(id)sender;
 
@@ -162,16 +152,10 @@
 
 - (IBAction)tabulateButtonTouch:(id)sender;
 
+@property(strong, nonatomic) IBOutlet UIView *portrairView;
 
-@property (strong, nonatomic) IBOutlet UIView *portrairView;
+@property(weak, nonatomic) IBOutlet UIView *turboLabelAndScSwitchView;
 
-
-
-@property (weak, nonatomic) IBOutlet UIView *turboLabelAndScSwitchView;
-
-@property (weak, nonatomic) IBOutlet UIView *dreamLabelAndStyleCh;
-
-
+@property(weak, nonatomic) IBOutlet UIView *dreamLabelAndStyleCh;
 
 @end
-

@@ -18,7 +18,6 @@
 		522D27E31D118F2A00E97AC4 /* dreamCalcUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 522D27E21D118F2A00E97AC4 /* dreamCalcUITests.m */; };
 		527535481D219498006F703B /* SecondViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 527535471D219498006F703B /* SecondViewController.m */; };
 		527535511D227E5B006F703B /* PlotView.m in Sources */ = {isa = PBXBuildFile; fileRef = 527535501D227E5B006F703B /* PlotView.m */; };
-		52B404941D2E77D5000C553E /* galaxy2.png in Resources */ = {isa = PBXBuildFile; fileRef = 52B404911D2E77D5000C553E /* galaxy2.png */; };
 		52B4049B1D2E7B12000C553E /* wood1.png in Resources */ = {isa = PBXBuildFile; fileRef = 52B404991D2E7B12000C553E /* wood1.png */; };
 		52B404B71D2E9304000C553E /* galaxy.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 52B404B61D2E9304000C553E /* galaxy.jpg */; };
 		52D189B21D1C60BB008A8278 /* roundButtonV1.png in Resources */ = {isa = PBXBuildFile; fileRef = 52D189AF1D1C60BB008A8278 /* roundButtonV1.png */; };
@@ -67,7 +66,6 @@
 		527535471D219498006F703B /* SecondViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SecondViewController.m; sourceTree = "<group>"; };
 		5275354F1D227E5B006F703B /* PlotView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PlotView.h; sourceTree = "<group>"; };
 		527535501D227E5B006F703B /* PlotView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PlotView.m; sourceTree = "<group>"; };
-		52B404911D2E77D5000C553E /* galaxy2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = galaxy2.png; path = GraphicalResources/Backgrounds/galaxy2.png; sourceTree = SOURCE_ROOT; };
 		52B404991D2E7B12000C553E /* wood1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = wood1.png; path = GraphicalResources/Backgrounds/wood1.png; sourceTree = SOURCE_ROOT; };
 		52B404B61D2E9304000C553E /* galaxy.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = galaxy.jpg; path = GraphicalResources/Backgrounds/galaxy.jpg; sourceTree = SOURCE_ROOT; };
 		52D189AF1D1C60BB008A8278 /* roundButtonV1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = roundButtonV1.png; path = GraphicalResources/Buttons/roundButtonV1.png; sourceTree = SOURCE_ROOT; };
@@ -208,7 +206,6 @@
 			children = (
 				52B404B61D2E9304000C553E /* galaxy.jpg */,
 				52B404991D2E7B12000C553E /* wood1.png */,
-				52B404911D2E77D5000C553E /* galaxy2.png */,
 			);
 			name = Backgrounds;
 			sourceTree = "<group>";
@@ -323,7 +320,6 @@
 				52D189B31D1C60BB008A8278 /* roundButtonV2.png in Resources */,
 				52D189B21D1C60BB008A8278 /* roundButtonV1.png in Resources */,
 				52B404B71D2E9304000C553E /* galaxy.jpg in Resources */,
-				52B404941D2E77D5000C553E /* galaxy2.png in Resources */,
 				52D189B41D1C60BB008A8278 /* roundButtonV3.png in Resources */,
 				521D09671D265F6B0079BB86 /* A Day in the Life.mp3 in Resources */,
 				522D27CA1D118F2A00E97AC4 /* Assets.xcassets in Resources */,
@@ -503,6 +499,7 @@
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = dreamCalc/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.yurayasinskyy.dreamCalc;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -518,6 +515,7 @@
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = dreamCalc/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.yurayasinskyy.dreamCalc;
 				PRODUCT_NAME = "$(TARGET_NAME)";

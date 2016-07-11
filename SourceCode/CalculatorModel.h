@@ -7,29 +7,30 @@
 //
 
 #import <Foundation/Foundation.h>
-#import <UIKit/UIKit.h>
 #import <QuartzCore/QuartzCore.h>
+#import <UIKit/UIKit.h>
 
 @interface CalculatorModel : NSObject
 
+@property(strong, nonatomic) NSArray* tabulatedXdata;
+@property(strong, nonatomic) NSArray* tabulatedYdata;
 
-@property (strong, nonatomic) NSArray* tabulatedXdata;
-@property (strong, nonatomic) NSArray* tabulatedYdata;
+- (NSString*)regexSyntaxCheker:(NSString*)inputText;
 
+- (void)functionTabulator:(NSString*)inputStringFunction
+                 andRange:(CGFloat)rangeStart
+                   andEnd:(CGFloat)rangeEnd
+                  andStep:(CGFloat)tabulationStep;
 
-- (NSString*) regexSyntaxCheker: (NSString*) inputText;
+- (NSString*)parseUserInputFromLabel:
+    (NSString*)inputText;  // parsing input expression
 
-- (void) functionTabulator: (NSString*) inputStringFunction andRange: (CGFloat) rangeStart andEnd: (CGFloat) rangeEnd  andStep: (CGFloat) tabulationStep;
+- (CGFloat)resultWithNSExpression:(NSString*)inputString;
 
-- (NSString*) parseUserInputFromLabel: (NSString*) inputText; //parsing input expression
+- (NSArray*)prepareToRPN:(NSString*)inputString;
 
-- (CGFloat) resultWithNSExpression: (NSString*) inputString;
+- (NSArray*)reversePolishNotation:(NSArray*)preparedArray;
 
-- (NSArray*) prepareToRPN: (NSString*) inputString;
-
-- (NSArray*) reversePolishNotation: (NSArray*) preparedArray;
-
-- (CGFloat) calculatingResultFromRPN: (NSArray*) rpnOutputString;
-
+- (CGFloat)calculatingResultFromRPN:(NSArray*)rpnOutputString;
 
 @end
